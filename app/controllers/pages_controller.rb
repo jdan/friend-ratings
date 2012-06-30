@@ -7,15 +7,15 @@ class PagesController < ApplicationController
   end
 
   def new
-  	@page = Page.new
+    @page = Page.new
   end
   def create
-  	@page = Page.new(params[:page])
+    @page = Page.new(params[:page])
     @page.ip = request.remote_ip
 
-  	respond_to do |format|
-  		if @page.save
-  			format.html { redirect_to @page, :notice => "Page successfully created" }
+    respond_to do |format|
+      if @page.save
+        format.html { redirect_to @page, :notice => "Page successfully created" }
       else
         flash.now.alert = "Page could not be created"
         render :new
