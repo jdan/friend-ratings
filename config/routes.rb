@@ -1,9 +1,6 @@
 Friendratings::Application.routes.draw do
-  get "pages/new"
-
-  get "pages/edit"
-
-  get "pages/show"
+  
+  resources :pages
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
