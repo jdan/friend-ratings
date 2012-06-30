@@ -1,6 +1,5 @@
 class RatingsController < ApplicationController
 
-  # ajax
   def create
     @rating = Rating.create(params[:rating])
     @rating.ip = request.remote_ip
@@ -8,9 +7,10 @@ class RatingsController < ApplicationController
 
     respond_to do |format|
       if @rating.save
-        format.js
+        format.html { redirect_to @rating.page, :notice => "Rating successfully created" }
       else
-        format.js { render :js => "alert('oh no!')" }
+        # TODO: render a new page with the form and validation errors
+        format.html { redirect_to @rating.page }
       end
     end
 
