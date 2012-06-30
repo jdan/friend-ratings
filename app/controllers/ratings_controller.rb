@@ -4,7 +4,7 @@ class RatingsController < ApplicationController
   def create
     @rating = Rating.create(params[:rating])
     @rating.ip = request.remote_ip
-    @rating.rating = params[:score]
+    @rating.rating = params[:score].to_f
 
     respond_to do |format|
       if @rating.save
