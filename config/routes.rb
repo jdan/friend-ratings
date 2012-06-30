@@ -1,6 +1,7 @@
 Friendratings::Application.routes.draw do
   
   resources :pages
+  resources :ratings
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
