@@ -4,6 +4,7 @@ class PagesController < ApplicationController
 
   def get_page
     @page = Page.find(params[:id])
+  end
 
   def new
   	@page = Page.new
@@ -48,4 +49,5 @@ class PagesController < ApplicationController
       end
     end
   end
+
 end
