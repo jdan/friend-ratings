@@ -7,3 +7,5 @@
 <% @page.ratings.each do |rating| %>
 	<p>Hello</p>
 <% end %>
+
+<%= render :partial => "ratings/form", :locals => { :rating => Rating.new(:page_id => @page.id ) } %>
