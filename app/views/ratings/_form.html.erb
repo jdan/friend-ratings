@@ -1,6 +1,9 @@
 <h3>Leave a rating for <%= rating.page.name %></h3>
 
 <%= form_for rating do |f| %>
+  
+  <div id="new_rating" class="raty"></div>
+
   <%= f.label :name, 'Your name' %>
   <%= f.text_field :name %><br />
 
