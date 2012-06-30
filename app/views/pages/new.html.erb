@@ -1,21 +1,3 @@
 <h1>New Page</h1>
 
-<%= form_for @page do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %><br />
-
-  <%= f.label :description %><br />
-  <%= f.text_area :description %><br />
-
-  <%= f.label :author, "Your name?" %>
-  <%= f.text_field :author %><br />
-
-  <h3>Security Question</h3>
-  <%= f.label :question %>
-  <%= f.text_field :question %><br />
-
-  <%= f.label :answer %>
-  <%= f.text_field :answer %><br />
-
-  <%= f.submit %>
-<% end %>
+<%= render :partial => "form" %>
