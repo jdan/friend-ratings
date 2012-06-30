@@ -5,7 +5,7 @@
 <p><i>Created by <%= @page.author %></i></p>
 
 <% @page.ratings.each do |rating| %>
-	<p>Hello</p>
+	<%= render :partial => "ratings/show", :locals => { :rating => rating } %>
 <% end %>
 
 <%= render :partial => "ratings/form", :locals => { :rating => Rating.new(:page_id => @page.id ) } %>
