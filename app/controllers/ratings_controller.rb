@@ -3,6 +3,7 @@ class RatingsController < ApplicationController
   # ajax
   def create
     @rating = Rating.create(params[:rating])
+    @rating.ip = request.remote_ip
 
     respond_to do |format|
       if @rating.save

@@ -10,6 +10,7 @@ class PagesController < ApplicationController
   end
   def create
   	@page = Page.new(params[:page])
+    @page.ip = request.remote_ip
 
   	respond_to do |format|
   		if @page.save
