@@ -1,2 +1,9 @@
-<h1>Pages#show</h1>
-<p>Find me in app/views/pages/show.html.erb</p>
+<h1><%= @page.name %></h1>
+
+<p><%= @page.description %></p>
+
+<p><i>Created by <%= @page.author %></i></p>
+
+<% @page.ratings.each do |rating| %>
+	<p>Hello</p>
+<% end %>
