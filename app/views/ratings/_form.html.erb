@@ -1,0 +1,16 @@
+<h3>Leave a rating for <%= rating.page.name %></h3>
+
+<%= form_for rating do |f| %>
+  <%= f.label :name, 'Your name' %>
+  <%= f.text_field :name %><br />
+
+  <%= f.label :summary, 'Brief summary' %>
+  <%= f.text_field :summary %><br />
+
+  <%= f.label :content, 'Comments' %><br />
+  <%= f.text_area :content %><br />
+
+  <%= f.hidden_field :page_id, :value => rating.page.id %>
+
+  <%= f.submit %>
+<% end %>
