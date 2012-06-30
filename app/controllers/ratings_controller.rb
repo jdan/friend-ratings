@@ -10,11 +10,9 @@ class RatingsController < ApplicationController
         format.html { redirect_to @rating.page, :notice => "Rating successfully created" }
       else
         # TODO: render a new page with the form and validation errors
-        format.html { redirect_to @rating.page }
+        render :new
       end
     end
-
   end
-
 
 end
