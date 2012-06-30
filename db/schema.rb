@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120630040100) do
+ActiveRecord::Schema.define(:version => 20120630040204) do
 
   create_table "pages", :force => true do |t|
     t.string   "name"
@@ -20,6 +20,17 @@ ActiveRecord::Schema.define(:version => 20120630040100) do
     t.boolean  "reported"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "ratings", :force => true do |t|
+    t.integer  "page_id"
+    t.string   "name"
+    t.string   "summary"
+    t.text     "content"
+    t.decimal  "rating",     :precision => 10, :scale => 0
+    t.boolean  "reported"
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
   end
 
 end

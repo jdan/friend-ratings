@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  page_id: 1
+  name: MyString
+  summary: MyString
+  content: MyText
+  rating: 9.99
+  reported: false
+
+two:
+  page_id: 1
+  name: MyString
+  summary: MyString
+  content: MyText
+  rating: 9.99
+  reported: false
